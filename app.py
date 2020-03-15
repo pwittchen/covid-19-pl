@@ -18,7 +18,6 @@ if str(sys.argv[1]) == 'summary':
       infected = int(item['Liczba'])
       dead =  0 if not item['Liczba zgonów'] else int(item['Liczba zgonów'])
       break
-
   print('infected;dead')
   print('{};{}'.format(infected, dead))
 
