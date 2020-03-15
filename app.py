@@ -19,7 +19,8 @@ if str(sys.argv[1]) == 'summary':
       dead =  0 if not item['Liczba zgonów'] else int(item['Liczba zgonów'])
       break
 
-  print('infected: {}, dead: {} '.format(infected, dead))
+  print('infected;dead')
+  print('{};{}'.format(infected, dead))
 
 if str(sys.argv[1]) == 'regions':
   print(register_data['data'])
