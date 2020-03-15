@@ -11,11 +11,9 @@ request = requests.get(url)
 html = BeautifulSoup(request.text, 'html.parser')
 text = html.find(id="registerData").string
 register_data = json.loads(text)
-data = register_data['data']
-parsed_data = register_data['parsedData']
 
 if str(sys.argv[1]) == 'summary':
-  for item in json.loads(parsed_data):
+  for item in json.loads(register_data['parsedData']):
     if item['Województwo'] == 'Cała Polska':
       infected = int(item['Liczba'])
       dead =  0 if not item['Liczba zgonów'] else int(item['Liczba zgonów'])
@@ -24,4 +22,4 @@ if str(sys.argv[1]) == 'summary':
   print('infected: {}, dead: {} '.format(infected, dead))
 
 if str(sys.argv[1]) == 'regions':
-  print(data)
+  print(register_data['data'])
