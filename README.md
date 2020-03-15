@@ -1,5 +1,5 @@
 # COVID-19 PL
-monitoring data regarding COVID-19 situation in Poland
+☣️ monitoring data regarding COVID-19 situation in Poland
 
 References
 ----------
