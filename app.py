@@ -6,6 +6,9 @@ from bs4 import BeautifulSoup
 if len(sys.argv) != 2:
   sys.exit()
 
+if str(sys.argv[1]) != 'summary' and str(sys.argv[1]) != 'regions':
+  sys.exit()
+
 url = 'https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2'
 request = requests.get(url)
 html = BeautifulSoup(request.text, 'html.parser')
