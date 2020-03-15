@@ -11,4 +11,4 @@ usage
 references
 ----------
 
-https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2
+source of data: https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2
