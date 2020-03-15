@@ -10,12 +10,18 @@ installing dependencies:
 pip install -r requirements.txt
 ```
 
-getting data:
+getting data of all regions:
 
 ```
-python get_data.py
+python app.py regions
 ```
 
+getting summary for whole country:
+
+
+```
+python app.py summary
+```
 
 references
 ----------
