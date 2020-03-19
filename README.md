@@ -8,6 +8,11 @@ usage
 - getting data of all regions: `python app.py regions`
 - getting summary for whole country: `python app.py summary`
 
+data
+----
+
+timeline data gathered by me so far is available in `timeline.csv` script
+
 references
 ----------
 
