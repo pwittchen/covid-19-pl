@@ -6,6 +6,7 @@ usage
 
 - installing dependencies: `pip install -r requirements.txt`
 - getting data of all regions: `python app.py regions`
+- getting data for the single region: `python app.py region <name>`, e.g. `python app.py region śląskie`
 - getting summary for whole country: `python app.py summary`
 
 data

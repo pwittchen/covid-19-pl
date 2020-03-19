@@ -3,26 +3,29 @@ import json
 import sys
 from bs4 import BeautifulSoup
 
-if len(sys.argv) != 2:
-  sys.exit()
+def get_register():
+  url = 'https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2'
+  request = requests.get(url)
+  html = BeautifulSoup(request.text, 'html.parser')
+  text = html.find(id="registerData").string
+  return json.loads(text)
 
-if str(sys.argv[1]) != 'summary' and str(sys.argv[1]) != 'regions':
-  sys.exit()
-
-url = 'https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2'
-request = requests.get(url)
-html = BeautifulSoup(request.text, 'html.parser')
-text = html.find(id="registerData").string
-register_data = json.loads(text)
-
-if str(sys.argv[1]) == 'summary':
-  for item in json.loads(register_data['parsedData']):
-    if item['Województwo'] == 'Cała Polska':
+def get_region(region):
+  register = get_register()
+  for item in json.loads(register['parsedData']):
+    if item['Województwo'] == region:
       infected = int(item['Liczba'])
       dead =  0 if not item['Liczba zgonów'] else int(item['Liczba zgonów'])
       break
   print('infected;dead')
   print('{};{}'.format(infected, dead))
 
-if str(sys.argv[1]) == 'regions':
-  print(register_data['data'])
+def main():
+  if str(sys.argv[1]) == 'summary':
+    get_region('Cała Polska')
+  if str(sys.argv[1]) == 'regions':
+    print(get_register()['data'])
+  if str(sys.argv[1]) == 'region':
+    get_region(str(sys.argv[2]))
+
+main()
