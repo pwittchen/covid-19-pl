@@ -10,7 +10,7 @@ def get_register():
   text = html.find(id="registerData").string
   return json.loads(text)
 
-def get_region(region):
+def print_region(region):
   register = get_register()
   for item in json.loads(register['parsedData']):
     if item['Województwo'] == region:
@@ -22,10 +22,10 @@ def get_region(region):
 
 def main():
   if str(sys.argv[1]) == 'summary':
-    get_region('Cała Polska')
+    print_region('Cała Polska')
   if str(sys.argv[1]) == 'regions':
     print(get_register()['data'])
   if str(sys.argv[1]) == 'region':
-    get_region(str(sys.argv[2]))
+    print_region(str(sys.argv[2]))
 
 main()
