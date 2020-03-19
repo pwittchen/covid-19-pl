@@ -12,7 +12,7 @@ usage
 data
 ----
 
-timeline data gathered by me so far is available in `timeline.csv` script
+timeline data gathered by me so far is available in `data/timeline.csv` script
 
 references
 ----------
