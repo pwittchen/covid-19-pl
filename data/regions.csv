@@ -1,19 +1,19 @@
-Województwo,Liczba,Liczba zgonów,Id
-Cała Polska,411,5,t00
-dolnośląskie,58,2,t02
-kujawsko-pomorskie,14,,t04
-lubelskie,28,1,t06
-lubuskie,9,,t08
-łódzkie,48,,t10
-małopolskie,13,,t12
-mazowieckie,107,,t14
-opolskie,10,,t16
-podkarpackie,19,1,t18
-podlaskie,3,,t20
-pomorskie,10,,t22
-śląskie,43,,t24
-świętokrzyskie,6,,t26
-warmińsko-mazurskie,16,,t28
-wielkopolskie,18,1,t30
-zachodniopomorskie,9,,t32
+Województwo;Liczba;Liczba zgonów;Id
+Cała Polska;627;7;t00
+dolnośląskie;79;2;t02
+kujawsko-pomorskie;18;;t04
+lubelskie;37;1;t06
+lubuskie;11;;t08
+łódzkie;106;;t10
+małopolskie;24;;t12
+mazowieckie;147;1;t14
+opolskie;11;;t16
+podkarpackie;28;1;t18
+podlaskie;5;;t20
+pomorskie;17;;t22
+śląskie;66;;t24
+świętokrzyskie;7;;t26
+warmińsko-mazurskie;22;;t28
+wielkopolskie;37;2;t30
+zachodniopomorskie;12;;t32
 
