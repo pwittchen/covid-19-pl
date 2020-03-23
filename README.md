@@ -30,6 +30,22 @@ then create `covid_19_pl.log` file, make it writeable and create a new cron job 
 20 * * * * /path/to/script/covid_log.sh
 ```
 
+next, add i3 config in your `~/.config/i3/config` file:
+
+```
+
+...
+order += "read_file covid"    
+...
+
+read_file covid {
+        format = "%content"
+        path = "/path/to/log/covid_19_pl.log"
+}
+
+...
+```
+
 references
 ----------
 
