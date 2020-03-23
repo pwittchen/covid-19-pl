@@ -27,7 +27,7 @@ python /path/to/repo/app.py summary | tail -n1 | awk -F ";" '{print "☣ " $1 " 
 then create `covid_19_pl.log` file, make it writeable and create a new cron job for this script, e.g.:
 
 ```
-20 * * * * /home/pw/.scripts/covid_log.sh
+20 * * * * /path/to/script/covid_log.sh
 ```
 
 references
