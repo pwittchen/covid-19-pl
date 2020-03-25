@@ -16,6 +16,24 @@ data gathered by me so far is available in the following files:
 - `data/timeline.csv`
 - `data/regions.csv`
 
+collecting timeline data
+-------------------------
+
+create `covid_log_archive.sh` script:
+
+```bash
+#!/usr/bin/env bash
+stat=$(python ~/Development/prv/python/covid-19-pl/app.py summary | tail -n1)
+when=$(date "+%Y-%m-%d %H:%M:%S")
+echo "$when,$stat" | sed "s/;/,/g"  >> /var/log/scripts/covid_19_pl_archive.log
+```
+
+and add it as a cron job in your system:
+
+```
+15 * * * * /path/to/script/covid_log_archive.sh
+```
+
 using script in i3 status bar
 -----------------------------
 
