@@ -12,7 +12,9 @@ usage
 data
 ----
 
-timeline data gathered by me so far is available in `data/timeline.csv` file
+data gathered by me so far is available in the following files:
+- `data/timeline.csv`
+- `data/regions.csv`
 
 using script in i3 status bar
 -----------------------------
