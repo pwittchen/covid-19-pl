@@ -23,9 +23,9 @@ create `covid_log_archive.sh` script:
 
 ```bash
 #!/usr/bin/env bash
-stat=$(python ~/Development/prv/python/covid-19-pl/app.py summary | tail -n1)
+stat=$(python /path/to/repo/app.py summary | tail -n1)
 when=$(date "+%Y-%m-%d %H:%M:%S")
-echo "$when,$stat" | sed "s/;/,/g"  >> /var/log/scripts/covid_19_pl_archive.log
+echo "$when,$stat" | sed "s/;/,/g"  >> /path/to/log/covid_19_pl_archive.log
 ```
 
 and add it as a cron job in your system:
