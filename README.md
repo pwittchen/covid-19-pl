@@ -9,13 +9,6 @@ usage
 - getting data for the single region: `python app.py region <name>`, e.g. `python app.py region śląskie`
 - getting summary for whole country: `python app.py summary`
 
-data
-----
-
-data gathered by me so far is available in the following files:
-- `data/timeline.csv`
-- `data/regions.csv`
-
 collecting timeline data
 -------------------------
 
@@ -55,7 +48,7 @@ next, add i3 config in your `~/.config/i3/config` file:
 ```
 
 ...
-order += "read_file covid"    
+order += "read_file covid"
 ...
 
 read_file covid {
