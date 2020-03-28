@@ -21,7 +21,7 @@ when=$(date "+%Y-%m-%d %H:%M:%S")
 echo "$when,$stat" | sed "s/;/,/g"  >> /path/to/log/covid_19_pl_archive.log
 ```
 
-and add it as a cron job in your system:
+and add it as a cron job in your system, e.g.:
 
 ```
 15 * * * * /path/to/script/covid_log_archive.sh
