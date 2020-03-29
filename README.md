@@ -61,5 +61,5 @@ read_file covid {
 
 references
 ----------
-
-source of data: https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2
+- https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2
+- https://www.google.com/covid19-map/
